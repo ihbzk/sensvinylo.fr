@@ -23,6 +23,11 @@ function generateSitemap($db_client) {
     <priority>0.80</priority>
     </url>
     <url>
+    <loc>https://www.sensvinylo.fr/revetement-vinyle-paris</loc>
+    <lastmod>' . date('Y-m-d\TH:i:sP') . '</lastmod>
+    <priority>0.80</priority>
+    </url>
+    <url>
     <loc>https://www.sensvinylo.fr/mentions-legales</loc>
     <lastmod>' . date('Y-m-d\TH:i:sP') . '</lastmod>
     <priority>0.80</priority>
