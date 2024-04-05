@@ -1,0 +1,68 @@
+.animate {
+    font-weight: 400;
+    transform: translate3d(0, 0, 0);
+    perspective: 1000;
+    filter: blur(0);
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    transform-origin: center left;
+    transition: all 1s;
+
+    &:hover {
+        color: $theme;
+        margin-left: 15px;
+        transition: all 1s;
+    }
+
+    &::before {
+        padding-right: 55px;
+        content: url("../img/icons/petit-point-contour.svg");
+    }
+
+}
+
+.animate--shrink {
+    animation-duration: 1s;
+    animation-name: shrink;
+    animation-timing-function: 'linear';
+}
+
+.animate--grow {
+    animation-duration: 1s;
+    animation-timing-function: 'linear';
+    animation-name: grow;
+}
+
+.slick-list {
+    overflow: hidden;
+}
+
+.hero__title [aria-hidden] {
+    transition: 1s;
+}
+
+.hero__title .slick-current>a>h3 {
+    box-sizing: border-box;
+    display: block;
+    transition: all 1s;
+
+    &::before {
+        content: url("../img/icons/petit-point-contour.svg");
+    }
+}
+
+.hero__title .slick-current+.slick-slide>a>h3 {
+    color: $theme;
+    margin-left: 100px;
+    transition: all 1s;
+
+    &:hover {
+        color: $theme;
+        margin-left: 115px;
+        transition: all 1s;
+    }
+
+    &::before {
+        content: url("../img/icons/petit-point.svg");
+    }
+}

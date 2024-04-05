@@ -1,0 +1,10 @@
+###Variable d'environnement
+SetEnv MAGIC_QUOTES 0
+SetEnv REGISTER_GLOBALS 0
+
+###Interdire le listing  contenu d'un dossier
+Options -Indexes
+
+###Reecriture URL
+RewriteEngine Off
+Options +FollowSymlinks

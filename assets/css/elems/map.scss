@@ -1,0 +1,190 @@
+#map {
+    padding-top: 100%;
+    display: block;
+    position: relative;
+    background-image: url("../img/icons/map.png");
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+    margin-left: -20px;
+
+    @media screen and (max-width: $tablet) {
+        background-size: cover;
+    }
+
+    li {
+        display: block;
+        position: absolute;
+        width: 0.5rem;
+        height: 0.5rem;
+        background-color: $theme;
+        color: white;
+        border-radius: 2rem;
+        font-size: 25px;
+        text-align: center;
+        cursor: pointer;
+        transform: translateX(-1rem) translateY(-2.2rem);
+        transition: transform .5s ease-out,
+        background-color .25s ease-out;
+        border: 2px solid $theme;
+
+        @media screen and (max-width: $tablet) {
+            font-size: 20px;
+        }
+
+        @media screen and (max-width: $mobile) {
+            font-size: 15px;
+        }
+
+        &:hover {
+            color: white;
+            background-color: transparent;
+            transform: translateX(-1rem) translateY(-2.5rem);
+            border: 2px solid $theme;
+        }
+
+        &#position1 {
+    
+            @media screen and (max-width: $tablet) {
+                left: 60% !important;
+            }
+    
+            @media screen and (max-width: $mobile) {
+                top: 38.3% !important;
+                left: 54.57% !important;
+            }
+            
+            a {
+                line-height: 1rem;
+                white-space: nowrap;
+                margin-left: 18px;
+    
+                @media screen and (max-width: $tablet) {
+                    margin-left: -306px;
+                }
+
+                @media screen and (max-width: $mobile) {
+                    margin-left: -131px;
+                    position: relative;
+                    top: -30px;
+                }
+            }
+        }
+
+        &#position2 {
+    
+            @media screen and (max-width: $tablet) {
+                top: 67.15% !important;
+                left: 57.5% !important;
+            }
+    
+            @media screen and (max-width: $mobile) {    
+                top: 69.3% !important;
+                left: 58.57% !important;
+            }
+            
+            a {
+                line-height: 1rem;
+                white-space: nowrap;
+                margin-left: 18px;
+    
+                @media screen and (max-width: $tablet) {
+                    margin-left: -135px;
+                    position: relative;
+                    top: -30px;
+                }
+            }
+        }
+
+        &#position3 {
+    
+            @media screen and (max-width: $tablet) {
+                top: 74.3% !important;
+                left: 52.57% !important;
+            }
+    
+            @media screen and (max-width: $mobile) {
+                top: 77.3% !important;
+                left: 53.57% !important;
+            }
+            
+            a {
+                line-height: 1rem;
+                white-space: nowrap;
+                margin-left: -180px;
+    
+                @media screen and (max-width: $tablet) {
+                    margin-left: -286px;
+                }
+
+                @media screen and (max-width: $mobile) {
+                    margin-left: -113px;
+                    position: relative;
+                    top: 10px;
+                }
+            }
+        }
+
+        &#position4 {
+    
+            @media screen and (max-width: $tablet) {
+                top: 50.3% !important;
+                left: 74.57% !important;
+            }
+    
+            @media screen and (max-width: $mobile) {
+                top: 47.3% !important;
+                left: 73.57% !important;
+            }
+            
+            a {
+                line-height: 1rem;
+                white-space: nowrap;
+                margin-left: -180px;
+    
+                @media screen and (max-width: $tablet) {
+                    margin-left: -286px;
+                }
+
+                @media screen and (max-width: $mobile) {
+                    margin-left: -113px;
+                    position: relative;
+                    top: 10px;
+                }
+            }
+        }
+
+        &#position5 {
+    
+            @media screen and (max-width: $tablet) {
+                top: 94.3% !important;
+                left: 8.57% !important;
+            }
+    
+            @media screen and (max-width: $mobile) {
+                top: 97.3% !important;
+                left: 13.57% !important;
+            }
+            
+            span {
+                cursor: default;
+                line-height: 1rem;
+                white-space: nowrap;
+                margin-left: 15px;
+    
+                @media screen and (max-width: $tablet) {
+                    margin-left: 10px;
+                }
+
+                @media screen and (max-width: $mobile) {
+                    margin-left: 5px;
+                    position: relative;
+                    top: 10px;
+                }
+            }
+        }
+    }
+}

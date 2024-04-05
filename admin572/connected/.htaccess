@@ -1,0 +1,66 @@
+###Variable d'environnement
+SetEnv MAGIC_QUOTES 0
+SetEnv REGISTER_GLOBALS 0
+
+###Interdire le listing  contenu d'un dossier
+Options -Indexes
+
+###To make sure that rewritten dir or file (/|.html) will not load dir.php in case it exist
+#Options -MultiViews
+
+###Reecriture URL
+RewriteEngine on
+Options +FollowSymlinks
+
+#RewriteCond %{HTTP_HOST} !^$ 
+#RewriteRule ^(.*) /$1 [QSA,L,R=301]
+
+RewriteRule ^accueil$ ./index.php [L]
+
+###Show main pages
+RewriteRule ^404$ ./404.php [L]
+RewriteRule ^project$ ./index.php [L]
+RewriteRule ^studios$ ./index.php [L]
+RewriteRule ^choose-template-project$ ./index.php [L]
+RewriteRule ^project-categories$ ./index.php [L]
+
+###Visibilty pages
+RewriteRule ^project-categories-visible$ ./index.php [L]
+RewriteRule ^studios-visible$ ./index.php [L]
+RewriteRule ^project-blocks1-visible$ ./index.php [L]
+RewriteRule ^project-blocks2-visible$ ./index.php [L]
+
+###Show add pages
+RewriteRule ^project-categories-add$ ./index.php [L]
+RewriteRule ^project-blocks1-add$ ./index.php [L]
+RewriteRule ^project-blocks2-add$ ./index.php [L]
+RewriteRule ^projects-images-add-([0-9]+)$ ./index.php?id=$1 [L]
+RewriteRule ^projects-videos-add-([0-9]+)$ ./index.php?id=$1 [L]
+RewriteRule ^studios-add$ ./index.php [L]
+RewriteRule ^studios-images-add-([0-9]+)$ ./index.php?id=$1 [L]
+RewriteRule ^studios-blocks-details-add-([0-9]+)$ ./index.php?id=$1 [L]
+
+###Show delete pages
+RewriteRule ^project-categories-delete$ ./index.php [L]
+RewriteRule ^studios-delete$ ./index.php [L]
+RewriteRule ^studios-images-delete$ ./index.php [L]
+RewriteRule ^studios-blocks-details-delete$ ./index.php [L]
+RewriteRule ^projects-delete$ ./index.php [L]
+RewriteRule ^projects-images-delete$ ./index.php [L]
+RewriteRule ^projects-videos-delete$ ./index.php [L]
+
+###Show edit pages
+RewriteRule ^project-categories-edit-([0-9]+)$ ./index.php?id=$1 [L]
+RewriteRule ^studios-edit-([0-9]+)$ ./index.php?id=$1 [L]
+RewriteRule ^studios-images-edit-([0-9]+)$ ./index.php?id=$1 [L]
+RewriteRule ^studios-single-image-edit-([0-9]+)$ ./index.php?id=$1 [L]
+RewriteRule ^studios-blocks-details-edit-([0-9]+)$ ./index.php?id=$1 [L]
+RewriteRule ^studios-blocks-details-single-edit-([0-9]+)$ ./index.php?id=$1 [L]
+RewriteRule ^projects-edit-([0-9]+)$ ./index.php?id=$1 [L]
+RewriteRule ^projects-images-edit-([0-9]+)$ ./index.php?id=$1 [L]
+RewriteRule ^projects-videos-edit-([0-9]+)$ ./index.php?id=$1 [L]
+RewriteRule ^projects-single-image-edit-([0-9]+)$ ./index.php?id=$1 [L]
+RewriteRule ^projects-single-video-edit-([0-9]+)$ ./index.php?id=$1 [L]
+
+ErrorDocument 404 /404
+ErrorDocument 403 /404

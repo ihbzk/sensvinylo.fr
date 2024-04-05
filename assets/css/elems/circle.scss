@@ -1,0 +1,66 @@
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+.multigraph {
+    display: flex;
+    justify-content: center;
+    
+    &:before {
+        content: '';
+        width: 300px;
+        height: 150px;
+        position: absolute;
+        border: 30px solid rgba(0, 0, 0, 1);
+        border-radius: 300px 300px 0 0;
+        border-bottom: none;
+        transform: scale(4);
+    }
+}
+
+.circle {
+    width: 300px;
+    height: 150px;
+    position: absolute;
+    overflow: hidden;
+    transition: all 2s;
+    transform: scale(4);
+
+    &:before, &:after {
+        width: 300px;
+        height: 150px;
+        position: absolute;
+        top: 100%;
+        border: 1px solid $theme;
+        content: '';
+        border-radius: 0 0 300px 300px;
+        border-top: none;
+        animation: demo 7s infinite;
+        transform-origin: center top;
+    }
+
+    &:after {
+        transform: rotate(180deg);
+    }
+}
+
+.circle-title {
+    
+    h2, h1 {
+        text-align: center;
+        position: relative;
+        top: -26px;
+    }
+}
+
+@keyframes demo {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+}

@@ -1,0 +1,31 @@
+.mini {
+    font-size: 1em;
+    text-align: center;
+    color: white;
+    line-height: 9em;
+    position: relative;
+    top: 50%;
+}
+
+.mega, .bola {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.65em;
+    font-weight: bold;
+    font-size: 11em;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    height: 63vh;
+    position: relative;
+}
+
+.bola {
+    position: absolute;
+    top: 0;
+}
+
+.boom {
+    color: black;
+}
