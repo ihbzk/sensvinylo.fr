@@ -17,22 +17,17 @@
 
 .container .form-outer {
     width: 100%;
-    overflow: hidden;
 }
 
 .container .form-outer form {
     display: flex;
-    width: calc(100% * var(--stepNumber));
+    width: 100;
 }
 
 .form-outer form .page {
-    width: calc(100% / var(--stepNumber));
+    width: 100%;
     height: 100%;
     transition: margin-left 0.3s ease-in-out;
-
-    @media screen and (max-width: $mobile) {
-        height: 600px;
-    }
 }
 
 .form-outer form .page .title {
@@ -320,10 +315,6 @@ form .page .btns button.next {
 .contact {
     padding-top: 140px;
 
-    @media screen and (max-width: $mobile) {
-        padding-top: 0;
-    }
-
     h2 {
         text-align: center;
         font-size: 60px;
@@ -340,10 +331,10 @@ form .page .btns button.next {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 27vw;
+    width: 60%;
 
-    @media screen and (max-width: $mobile) {
-        padding: 0;
+    @media screen and (max-width: $tablet) {
+        width: 100%;
     }
 }
 
@@ -351,4 +342,10 @@ form .page .field button.submit {
     width: 50%;
     left: 0;
     top: 230px;
+}
+
+#scroll-down-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
