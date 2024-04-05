@@ -1,0 +1,60 @@
+###Variable d'environnement
+SetEnv MAGIC_QUOTES 0
+SetEnv REGISTER_GLOBALS 0
+
+###Interdire le listing  contenu d'un dossier
+Options -Indexes
+
+###Reecriture URL
+RewriteEngine on
+Options +FollowSymlinks
+
+#RewriteCond %{HTTP_HOST} !^www\.
+#RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
+#RewriteRule ^([_a-z0-9]*)$ index.php [L]
+#RewriteRule ^(.*)$ index.php [L]
+RewriteRule !\.(js|ico|txt|tiff|mp4|mov|gif|jpg|json|jpeg|png|css|less|webp|otf|eot|svg|ttf|woff|pdf|zip|xml)$ index.php
+
+ErrorDocument 404 /Template_v4/index.php 
+ErrorDocument 403 /Template_v4//index.php
+
+AddCharset UTF-8 .html
+
+# Apache 2.0
+SetOutputFilter DEFLATE
+#AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/x-javascript
+
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+</IfModule>
+
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/pdf "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType application/x-javascript "access plus 1 month"
+    ExpiresByType application/x-shockwave-flash "access plus 1 month"
+    ExpiresByType image/x-icon "access plus 1 year"
+    ExpiresDefault "access 2 days"
+</IfModule>
+
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options nosniff
+    Header always append X-Frame-Options SAMEORIGIN
+    Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';"
+    Header set X-XSS-Protection "1; mode=block"
+    Header unset Server
+</IfModule>
