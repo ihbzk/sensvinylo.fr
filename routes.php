@@ -30,8 +30,6 @@
 
         "studios" => array("Découvrez nos 3 studios à Paris - Un espace adapté à chaque projet", "Chaque studio est conçu pour répondre aux besoins spécifiques de vos projets photo ou de vidéo. Découvrez les caractéristiques uniques de chaque studio !", "Studios"),
         "projects" => array("La maison de Production - découvrez l'ensemble de nos projets", "Découvrez nos réalisations les plus récentes et apprenez-en davantage sur notre approche créative, notre expertise et notre passion pour l'art de la vidéo.", "Projets"),
-        "project-single" => array("Projet", "Projet", "Projet"),
-        "studio-single" => array("Studio", "Studio", "Studio"),
 
         "revetement-vinyle-paris" => array("Revêtement Vinyle Paris - $conf_name", "Découvrez les avantages du revêtement vinyle pour vos murs et sols à Paris. $conf_name propose des solutions de décoration sur mesure pour les particuliers et les professionnels.", "Revêtement vinyle Paris"),
 

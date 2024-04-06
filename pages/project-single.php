@@ -6,6 +6,10 @@ $stmt = $db_client->prepare("SELECT * FROM project WHERE slug=?");
 $stmt->execute(array($projectSlug));
 $projects = $stmt->fetch();
 
+$meta_title = $projects->meta_title;
+$meta_description = $projects->meta_description;
+$meta_keywords = $projects->meta_keywords;
+
 $stmt2 = $db_client->prepare("SELECT * FROM project_images ORDER BY id ASC");
 $stmt2->execute();
 $projectImages = $stmt2->fetchAll();

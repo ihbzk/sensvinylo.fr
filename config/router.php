@@ -20,10 +20,14 @@ if (!$current_route) {
         $current_route = "projects";
     } elseif (strpos($slug, $routes['project-single'] . '-') !== false) {
         $current_route = "project-single";
+        include "config/database.php";
+        include "pages/project-single.php";
     } elseif (strpos($slug, $routes['studios'] . '-') !== false) {
         $current_route = "studios";
     } elseif (strpos($slug, $routes['studio-single'] . '-') !== false) {
         $current_route = "studio-single";
+        include "config/database.php";
+        include "pages/studio-single.php";
     } else {
         http_response_code(404);
         $current_route = "404";
@@ -32,6 +36,12 @@ if (!$current_route) {
 
 $page = "pages/" . $current_route . ".php";
 
-$conf_title = $metas[$current_route][0];
-$conf_description = $metas[$current_route][1];
-$conf_keywords = $metas[$current_route][2];
+if ($current_route == "studio-single" || $current_route == "project-single") {
+    $conf_title = $meta_title;
+    $conf_description = $meta_description;
+    $conf_keywords = $meta_keywords;
+} else {
+    $conf_title = $metas[$current_route][0];
+    $conf_description = $metas[$current_route][1];
+    $conf_keywords = $metas[$current_route][2];
+}

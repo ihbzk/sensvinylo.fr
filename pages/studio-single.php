@@ -6,6 +6,10 @@ $stmt = $db_client->prepare("SELECT * FROM studios WHERE slug=?");
 $stmt->execute(array($studioSlug));
 $studios = $stmt->fetch();
 
+$meta_title = $studios->meta_title;
+$meta_description = $studios->meta_description;
+$meta_keywords = $studios->meta_keywords;
+
 $stmt2 = $db_client->prepare("SELECT * FROM studios_blocks_details ORDER BY created_at ASC");
 $stmt2->execute();
 $studiosBlocks = $stmt2->fetchAll();
@@ -17,8 +21,6 @@ $studiosCarousels = $stmt3->fetchAll();
 $stmt4 = $db_client->prepare("SELECT * FROM studios ORDER BY updated_at ASC");
 $stmt4->execute();
 $studiosAll = $stmt4->fetchAll();
-
-start_block($studios->meta_title, $studios->meta_keywords, $studios->meta_description);
 ?>
 
 <?php if (!empty($studios)) : ?>
