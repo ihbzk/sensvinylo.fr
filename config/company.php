@@ -17,6 +17,7 @@ $conf_address = "$conf_line1 <br> $conf_zipcode $conf_city";
 
 $conf_instagram = "https://www.instagram.com/sensvinylo/";
 $conf_facebook = "https://www.facebook.com/profile.php?id=61558154816957";
+$conf_linkedin = "https://www.linkedin.com/company/sensvinylo/";
 
 $conf_companyCapital = "100 000€";
 $conf_companyHeadOffice = "85 Avenue Pierre Grenier, 92100 Boulogne-Billancourt";

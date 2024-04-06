@@ -25,6 +25,10 @@
                     <a href="<?= $conf_facebook ?>" class="footer-link" target="_blank">
                         <img src="<?= asset("img/icons/facebook.svg"); ?>" alt="Logo Facebook" loading="lazy">
                     </a>
+                    <a href="<?= $conf_linkedin ?>" class="footer-link" target="_blank">
+                        <img src="<?= asset("img/icons/linkedin-3.svg"); ?>" alt="Logo LinkedIn" loading="lazy">
+                    </a>
+                    
                 </div>
             </div>
         </div>
