@@ -89,7 +89,7 @@ start_block('', '', '');
             </label>
             <div class="container projets toggle-box-content pb-3" id="winning-message" style="width: 100%">
                 <div class="targetDiv w-100">
-                    <p class="bloc2 text-center" style="display: block; padding: 0 30px">Oui, nous vous invitons à visiter nos studios à Paris pour découvrir nos collections et parler de votre projet avec nos experts.</p>
+                    <p class="bloc2 text-center" style="display: block; padding: 0 30px">Oui, nous vous invitons à visiter <a href="<?= getRoute("studios"); ?>" class="footer-link">nos studios à Paris</a> pour découvrir nos collections et parler de votre projet avec nos experts.</p>
                 </div>
             </div>
         </div>
