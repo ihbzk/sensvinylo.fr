@@ -128,16 +128,16 @@ if (!empty($studios)) :
                         <td>" . date("d/m/Y", strtotime($studio->updated_at)) . "</td>
                         <td>
                             <a data-bs-toggle='modal' href='#desc$studio->id' class='btn btn-xs btn-info' title='Contenu de ce studio' aria-label='Contenu de ce studio'>
-                                <span class='fa fa-file fa-fw'></span>
+                                <span>Voir</span>
                             </a>
                         </td>
                         <td>
                             <a href='studios-edit-$studio->id' class='btn btn-xs btn-warning' title='Editer ce studio' aria-label='Editer ce studio'>
-                                <span class='fa fa-edit fa-fw'></span>
+                                <span>Éditer</span>
                             </a>
                             &nbsp;&nbsp;
                             <a data-bs-toggle='modal' href='#suppr$studio->id' class='btn btn-xs btn-danger' title='Supprimer ce studio' aria-label='Supprimer ce studio'>
-                                <span class='fa fa-times fa-fw'></span>
+                                <span>Supprimer</span>
                             </a>
                         </td>
                     </tr>

@@ -72,10 +72,10 @@ if (!empty($_POST)) {
                         </div>
                         <div style='margin: 10px 0'>
                             <a href='studios-blocks-details-single-edit-$blocksDetail->id' class='btn btn-xs btn-warning' title='Editer ce bloc détail' aria-label='Editer ce bloc détail'>
-                                <span class='fa fa-edit fa-fw'></span>
+                                <span>Éditer</span>
                             </a>
                             <a data-bs-toggle='modal' href='#suppr$blocksDetail->id' class='btn btn-xs btn-danger' title='Supprimer ce bloc détail' aria-label='Supprimer ce bloc détail'>
-                                <span class='fa fa-times fa-fw'></span>
+                                <span>Supprimer</span>
                             </a>
                         </div><br><br>
                     </div>

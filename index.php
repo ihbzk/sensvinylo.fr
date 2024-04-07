@@ -1,6 +1,10 @@
 <?php
-ob_start();
+
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
+
 session_start();
+ob_start();
 
 include "functions/functions.php";
 include "functions/contact.php";
@@ -8,6 +12,40 @@ include "config/company.php";
 include "config/router.php";
 include "config/database.php";
 include "config/app.php";
+
+if ($current_route == "project-single") {
+    $temp = explode("projet-", $slug);
+    $projectSlug = $temp[1];
+    
+    $stmt = $db_client->prepare("SELECT * FROM project WHERE slug=?");
+    $stmt->execute(array($projectSlug));
+    $projectMeta = $stmt->fetch();
+
+    if ($projectMeta) {
+        $conf_title = $projectMeta->meta_title;
+        $conf_description = $projectMeta->meta_description;
+    } else {
+        $conf_title = "Projet title";
+        $conf_description = "Projet description";
+    }
+}
+
+if ($current_route == "studio-single") {
+    $temp = explode("studio-", $slug);
+    $studioSlug = $temp[1];
+    
+    $stmt = $db_client->prepare("SELECT * FROM studios WHERE slug=?");
+    $stmt->execute(array($studioSlug));
+    $studioMeta = $stmt->fetch();
+
+    if ($studioMeta) {
+        $conf_title = $studioMeta->meta_title;
+        $conf_description = $studioMeta->meta_description;
+    } else {
+        $conf_title = "Studio title";
+        $conf_description = "Studio description";
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +57,7 @@ include "config/app.php";
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <title><?= $conf_title ?></title>
     <meta name="description" content="<?= $conf_description ?>">
-	<link rel="icon" href="<?= asset("img/icons/favicon.png"); ?>" type="image/x-icon" />
+    <link rel="icon" href="<?= asset("img/icons/favicon.png"); ?>" type="image/x-icon" />
     <link rel="stylesheet" href="<?= asset("css/style.css"); ?>">
 </head>
 
@@ -33,7 +71,11 @@ include "config/app.php";
     <?php include("modules/navbar.php"); ?>
 
     <div id="page-wrapper">
-        <?php include $page ?>
+        <?php // if ($current_route == "studio-single" || $current_route == "project-single") : ?>`
+
+        <?php // else : ?>
+            <?php include $page ?>
+        <?php // endif; ?>
 
         <div class="sticky-phone download-pdf">
             <a href="tel:<?= $call_phone ?>"><?= $conf_phone ?></a>
@@ -46,5 +88,7 @@ include "config/app.php";
 </body>
 
 </html>
+
 <?php ob_end_flush(); ?>
+
 <?php $db_client = null; ?>

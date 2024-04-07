@@ -34,7 +34,6 @@
     </div>
 </section>
 
-
 <section class="studio-content2 pb-3 pt-3">
     <div class="container">
         <div class="blocs pb-3">
@@ -64,7 +63,7 @@
                     <li>Un loft artistique à Montmartre : transformation complète avec un sol en vinyle effet bois ancien</li>
                     <li>Boutique de mode à le Marais: installation d'un revêtement de sol en vinyle luxueux et résistant.</li>
                 </ul>
-                <a href="projets" class="pb-3" aria-label="Projets">
+                <a href="<?= getRoute("projects"); ?>" class="pb-3" aria-label="Projets">
                     <img src="<?= asset("img/icons/arrow-white-right.svg"); ?>" alt="Flèche blanche pointant vers la droite" loading="lazy">
                 </a>
             </div>

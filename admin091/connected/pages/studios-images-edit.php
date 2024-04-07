@@ -69,10 +69,10 @@ if (!empty($_POST)) {
                         <img src='../../$studioImage->image' alt='$studioImage->image_alt' style='width: 100%; height: 500px; object-fit: cover' loading='lazy'>
                         <div style='margin: 10px 0'>
                             <a href='studios-single-image-edit-$studioImage->id' class='btn btn-xs btn-warning' title='Editer cette image' aria-label='Editer cette image'>
-                                <span class='fa fa-edit fa-fw'></span>
+                                <span>Éditer</span>
                             </a>
                             <a data-bs-toggle='modal' href='#suppr$studioImage->id' class='btn btn-xs btn-danger' title='Supprimer cette image' aria-label=''>
-                                <span class='fa fa-times fa-fw'></span>
+                                <span>Supprimer</span>
                             </a>
                         </div><br><br>
                     </div>

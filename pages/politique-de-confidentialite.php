@@ -1,5 +1,4 @@
 <?php
-//start_block('title','keywords','description')
 start_block('', '', '');
 ?>
 
@@ -25,7 +24,7 @@ start_block('', '', '');
             </label>
             <div class="container projets toggle-box-content" id="winning-message" style="width: 100%">
                 <div class="targetDiv w-100">
-                    <p class="bloc2 text-center" style="display: block; padding: 0 30px">Conformément à la loi informatique et libertés du 6 janvier 1978 modifiée, vous disposez des droits d'accès, de rectification et de suppression des informations vous concernant, que vous pouvez exercer en vous adressant à <a href="mailto:<?= $conf_email ?>"><?= $conf_email ?></a>, ou par courrier à <a href="https://goo.gl/maps/AYYxQn7dVZThTmBs9" target="_blank" rel="noopener noreferrer" class="footer-link"><?= $conf_address ?></a>, en joignant une copie de votre pièce d'identité.</p>
+                    <p class="bloc2 text-center" style="display: block; padding: 0 30px">Conformément à la loi informatique et libertés du 6 janvier 1978 modifiée, vous disposez des droits d'accès, de rectification et de suppression des informations vous concernant, que vous pouvez exercer en vous adressant à <a href="mailto:<?= $conf_email ?>"><?= $conf_email ?></a>, ou par courrier à <a href="<?= $conf_googleMap ?>" target="_blank" rel="noopener noreferrer" class="footer-link"><?= $conf_address ?></a>, en joignant une copie de votre pièce d'identité.</p>
                 </div>
             </div>
         </div>

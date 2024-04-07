@@ -1,14 +1,11 @@
 <?php
-//start_block('title','keywords','description')
 start_block('', '', '');
 ?>
 <?php
-// Projets
 $stmt = $db_client->prepare("SELECT * FROM project GROUP BY id ORDER BY updated_at ASC");
 $stmt->execute();
 $projects = $stmt->fetchAll();
 
-// Catégories projet
 $stmt2 = $db_client->prepare("SELECT * FROM project_categories GROUP BY id ORDER BY id ASC");
 $stmt2->execute();
 $projectsCategories = $stmt2->fetchAll();
@@ -33,11 +30,11 @@ $projectsCategories = $stmt2->fetchAll();
                         <div class="bloc3"><?= $projectsCategory->content_2 ?></div>
                         <?php foreach ($projects as $project) : ?>
                             <?php
-                                $slug = $project->slug;
-                                $slug = remove_accents($slug);
-                                $slug = str_replace(array(' ', ':', ',', ';', '/', '.'), array('-', '-', '-', '-', '-', ''), $slug);
-                                $slug = strtolower($slug);
-                                $url = $routes['project-single'] . '-' . $slug;
+                            $slug = $project->slug;
+                            $slug = remove_accents($slug);
+                            $slug = str_replace(array(' ', ':', ',', ';', '/', '.'), array('-', '-', '-', '-', '-', ''), $slug);
+                            $slug = strtolower($slug);
+                            $url = $routes['project-single'] . '-' . $slug;
                             ?>
                             <?php if ($project->id_project_category == $projectsCategory->id) : ?>
                                 <?php if (!empty($projects)) : ?>

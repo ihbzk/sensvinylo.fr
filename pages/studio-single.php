@@ -32,11 +32,11 @@ $studiosAll = $stmt4->fetchAll();
                     <div class="studios">
                         <?php foreach ($studiosAll as $studioAll) { ?>
                             <?php
-                                $slug = $studioAll->slug;
-                                $slug = remove_accents($slug);
-                                $slug = str_replace(array(' ', ':', ',', ';', '/', '.', '\'', '---', '--', '"', ' -', '- '), array('-', '-', '-', '-', '-', '', '-', '-', '-', '-', '-', '-'), $slug);
-                                $slug = strtolower($slug);
-                                $url = $routes['studio-single'] . '-' . $slug;
+                            $slug = $studioAll->slug;
+                            $slug = remove_accents($slug);
+                            $slug = str_replace(array(' ', ':', ',', ';', '/', '.', '\'', '---', '--', '"', ' -', '- '), array('-', '-', '-', '-', '-', '', '-', '-', '-', '-', '-', '-'), $slug);
+                            $slug = strtolower($slug);
+                            $url = $routes['studio-single'] . '-' . $slug;
                             ?>
                             <p class="separator"> | </p>
                             <a href="<?= $url ?>" aria-label="Autres studios">

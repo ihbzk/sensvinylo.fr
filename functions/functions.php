@@ -22,135 +22,123 @@ function validate($regex, $field)
     }
 }
 
-/**
- * Form Helpers
- * ============
- * form_open()
- * form_close()
- *
- */
+function attributes($options = array())
+{
+    $html = '';
 
-function attributes($options = array()){
+    foreach ($options as $attribute => $value) {
+        $html .= $attribute . '="' . $value . '" ';
+    }
 
-	$html='';
-	foreach($options as $attribute => $value)
-	{
-		$html .= $attribute . '="'.$value.'" ';	
-	}
-	return $html;
+    return $html;
 }
 
-function form_open($route,$options = array()){
-
-	
-	return '<form role="form" method="post" action="'. $route.'" '.attributes($options).'>';
+function form_open($route, $options = array())
+{
+    return '<form role="form" method="post" action="' . $route . '" ' . attributes($options) . '>';
 }
 
-function form_close(){
-	return '</form>';
-
+function form_close()
+{
+    return '</form>';
 }
 
-function form_label($field,$for = NULL){
-	
-	return (!$for==NULL)?'<label for="form_'. $for.'">'.$field.'</label>':'<label>'.$field.'</label>';
+function form_label($field, $for = NULL)
+{
+    return (!$for == NULL) ? '<label for="form_' . $for . '">' . $field . '</label>' : '<label>' . $field . '</label>';
 }
 
-//for after
 function autofocus($form_is_submitted)
 {
-	return (!$form_is_submitted)?'autofocus':'';
+    return (!$form_is_submitted) ? 'autofocus' : '';
 }
 
-function form_text($name,$value,$options = array()){
-
-	return '<input type="text" name="'.$name.'" id="form_'.$name.'" value="'.$value.'" '. attributes($options) .'>';
-}
-
-function form_number($name,$value,$options = array()){
-
-	return '<input type="number" name="'.$name.'" id="form_'.$name.'" value="'.$value.'" '. attributes($options) .'>';
-}
-
-
-
-function form_feedback($form_is_submitted,$field_status)
+function form_text($name, $value, $options = array())
 {
-	return ($form_is_submitted)?'<span class="fa '.(($field_status == 'has-success')?'fa-check':'fa-times' ).' form-control-feedback"></span>':'';
+    return '<input type="text" name="' . $name . '" id="form_' . $name . '" value="' . $value . '" ' . attributes($options) . '>';
+}
+
+function form_number($name, $value, $options = array())
+{
+    return '<input type="number" name="' . $name . '" id="form_' . $name . '" value="' . $value . '" ' . attributes($options) . '>';
+}
+
+function form_feedback($form_is_submitted, $field_status)
+{
+    return ($form_is_submitted) ? '<span class="fa ' . (($field_status == 'has-success') ? 'fa-check' : 'fa-times') . ' form-control-feedback"></span>' : '';
 }
 
 
-function form_textarea($name,$value,$options = array()){
-
-	return '<textarea name="'.$name.'"  id="form_'.$name.'" '.attributes($options).'>'.$value.'</textarea>';
+function form_textarea($name, $value, $options = array())
+{
+    return '<textarea name="' . $name . '"  id="form_' . $name . '" ' . attributes($options) . '>' . $value . '</textarea>';
 }
 
-function form_select($name,$value,$list,$options = array()){
+function form_select($name, $value, $list, $options = array())
+{
+    $select_options = '';
 
-	$select_options = '';
-	foreach((array) $list as $option)
-	{
-		$select_options .= '<option '. (($value==$option)?'selected="selected"':'') .'>'.$option.'</option>';
-	}
+    foreach ((array) $list as $option) {
+        $select_options .= '<option ' . (($value == $option) ? 'selected="selected"' : '') . '>' . $option . '</option>';
+    }
 
-	return '<select name="'.$name.'" id="form_'.$name.'" '.attributes($options).'>'.$select_options.'</select>';
+    return '<select name="' . $name . '" id="form_' . $name . '" ' . attributes($options) . '>' . $select_options . '</select>';
 }
 
-function form_checkbox($name,$value,$label,$options = array()){
-
-	return '<label><input type="checkbox" name="'.$name.'" '. attributes($options).' '.(($value)?'checked':'').'>'.$label. '</label>';
+function form_checkbox($name, $value, $label, $options = array())
+{
+    return '<label><input type="checkbox" name="' . $name . '" ' . attributes($options) . ' ' . (($value) ? 'checked' : '') . '>' . $label . '</label>';
 }
 
-function form_radio($name,$radio,$value,$label,$form_is_submitted = TRUE,$options = array()){
-	/*if(!$form_is_submitted){
-		//return '<label><input type="radio" name="'.$name.'" value="'.$value.'" '.attributes($options).' checked'.'>'.$label.'</label>';		
-	}else{
-		//return '<label><input type="radio" name="'.$name.'" value="'.$value.'" '.attributes($options).' '.($radio == $value)?'checked':''.'>'.$label.'</label>';
-	}*/
-
-	return '<label><input type="radio" name="'.$name.'" value="'.$value.'" '.attributes($options).' '.((!$form_is_submitted OR $radio == $value)?'checked':'').'>'.$label.'</label>';
-
+function form_radio($name, $radio, $value, $label, $form_is_submitted = TRUE, $options = array())
+{
+    return '<label><input type="radio" name="' . $name . '" value="' . $value . '" ' . attributes($options) . ' ' . ((!$form_is_submitted or $radio == $value) ? 'checked' : '') . '>' . $label . '</label>';
 }
 
-function form_file($name){
-	return '<input type="file" name="'.$name.'" id="form_'.$name. '">';
+function form_file($name)
+{
+    return '<input type="file" name="' . $name . '" id="form_' . $name . '">';
 }
 
-/*
-	fixing $title issue with news(actualites)
-*/
-function start_block($page_title,$page_keywords,$page_description){
-	global $conf_title;
-	global $conf_keywords;
-	global $conf_description;
-	if(!empty($page_title))
-	{
-		$conf_title = $page_title;
-	}
-	if(!empty($page_keywords))
-	{
-		$conf_keywords = $page_keywords;
-	}
-	if(!empty($page_description))
-	{
-		$conf_description = $page_description;
-	}
+function start_block($page_title, $page_keywords, $page_description)
+{
+    global $conf_title;
+    global $conf_keywords;
+    global $conf_description;
 
-	ob_start();
+    if (!empty($page_title)) {
+        $conf_title = $page_title;
+    }
+
+    if (!empty($page_keywords)) {
+        $conf_keywords = $page_keywords;
+    }
+
+    if (!empty($page_description)) {
+        $conf_description = $page_description;
+    }
+
+    ob_start();
 }
 
-function end_block(){
-	global $content;
-	$content = ob_get_contents();
-	ob_end_clean();
+function end_block()
+{
+    global $content;
+
+    $content = ob_get_contents();
+
+    ob_end_clean();
 }
 
 function redirectNotification($message, $redirect = null, $class = "success")
 {
     global $routes;
     global $base;
+
     if (!$redirect) $redirect = $base . $routes['home'];
+
     $message = base64_encode($message);
+
     header("Location: $redirect?message=$message&class=$class");
     echo "<script>location.href='$redirect?message=$message&class=$class'</script>";
 }
@@ -159,8 +147,9 @@ function printNotification()
 {
     if (isset($_GET['message'])) {
         $message = base64_decode($_GET['message']);
-        if (isset($_GET['class'])) $class = $_GET['class'];
-?>
+
+        if (isset($_GET['class'])) $class = $_GET['class']; ?>
+
         <div class="notification <?= $class ?>">
             <p><?= $message ?></p>
             <div class="notification_toggle">
@@ -182,6 +171,7 @@ function printNotification()
                 }, 1000)
             }, 14000);
         </script>
+
 <?php }
 }
 
@@ -191,7 +181,6 @@ function printNotification()
  * @param String $asset The asset to load
  * @return String the relative path of the asset
  */
-
 function asset($asset)
 {
     global $base;
@@ -205,11 +194,11 @@ function asset($asset)
  * @param String $route The route to find
  * @return String the absolute route of the page
  */
-
 function getRoute($route)
 {
     global $base;
     global $routes;
+
     return $base . $routes[$route];
 }
 
@@ -248,5 +237,6 @@ function remove_accents($str)
         array('a', 'a', 'a', 'a', 'a', 'a', 'ae', 'c', 'e', 'e', 'e', 'e', 'i', 'i', 'i', 'i', 'o', 'n', 'o', 'o', 'o', 'o', 'o', 'o', 'u', 'u', 'u', 'u', 'y', 'th', 'y'),
         $str
     );
+    
     return $str;
 }

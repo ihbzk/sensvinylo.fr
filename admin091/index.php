@@ -1,8 +1,10 @@
 <?php session_start(); ?>
+
 <?php
 
 include "../config/app.php";
 include "connected/functions/functions.php";
+
 if (!$conf_client_database) {
 	header("Location: " . '../404');
 }
@@ -14,16 +16,16 @@ if (!$conf_client_database) {
 	<meta charset="utf-8" />
 	<title>Espace d'administration - <?= $conf_name ?></title>
 	<meta name="description" content="Espace d'administration - <?= $conf_name ?>" />
-    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
-	<link rel="icon" href="../img/favicon.png" type="image/x-icon" />
-	<meta name="Author" content="sensvinylo.fr" />
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+	<link rel="icon" href="../img/icons/favicon.png" type="image/x-icon" />
+	<meta name="Author" content="<?= $conf_name_website ?>" />
 	<link rel="stylesheet" href="<?= asset("../../assets/css/style.css"); ?>">
 </head>
 
 <body>
 	<div id="navbar">
 		<a href="." aria-label="Retour à la page d'accueil">
-			<img src="../assets/img/icons/logo.svg" alt="Logo La Maison de Production" id="navbar-logo" loading="lazy">
+			<img src="../assets/img/icons/logo-stroke.webp" alt="Logo <?= $conf_name ?>" id="navbar-logo" loading="lazy">
 		</a>
 		<nav id="navbar-nav">
 			<a href="." aria-label="Espace d'administration - <?= $conf_name ?>">Espace d'administration - <?= $conf_name ?></a>
@@ -33,7 +35,7 @@ if (!$conf_client_database) {
 	<section style="height: 100vh">
 		<div class="container">
 			<div class="text-center">
-				<img src="../assets/img/icons/logo.svg" class="img-responsive" alt="Logo login page" loading="lazy">
+				<img src="../assets/img/icons/logo-footer.webp" class="img-responsive" alt="Logo login page" loading="lazy">
 			</div>
 			<div class="center">
 				<?php

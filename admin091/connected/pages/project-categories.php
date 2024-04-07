@@ -84,16 +84,16 @@ if (!empty($projectCategories)) :
                         <td>" . date("d/m/Y", strtotime($projectCategory->updated_at)) . "</td>
                         <td>
                             <a data-bs-toggle='modal' href='#desc$projectCategory->id' class='btn btn-xs btn-info' title='Contenu de cette catégorie de projet' aria-label='Contenu de cette catégorie de projet'>
-                                <span class='fa fa-file fa-fw'></span>
+                                <span>Voir</span>
                             </a>
                         </td>
                         <td>
                             <a href='project-categories-edit-$projectCategory->id' class='btn btn-xs btn-warning' title='Editer cette catégorie de projet' aria-label='Editer cette catégorie de projet'>
-                                <span class='fa fa-edit fa-fw'></span>
+                                <span>Éditer</span>
                             </a>
                             &nbsp;&nbsp;
                             <a data-bs-toggle='modal' href='#suppr$projectCategory->id' class='btn btn-xs btn-danger' title='Supprimer cette catégorie de projet' aria-label='Supprimer cette catégorie de projet'>
-                                <span class='fa fa-times fa-fw'></span>
+                                <span>Supprimer</span>
                             </a>
                         </td>
                     </tr>

@@ -39,10 +39,10 @@ if (!empty($_POST)) {
                         <iframe width='100%' height='500px' src='$projectVideo->youtube_url' title='Vidéo du projet $project->title' frameborder='0' allow='accelerometer; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture' allowfullscreen='allowfullscreen' mozallowfullscreen='mozallowfullscreen' msallowfullscreen='msallowfullscreen' oallowfullscreen='oallowfullscreen' webkitallowfullscreen='webkitallowfullscreen'></iframe>
                         <div style='margin: 10px 0'>
                             <a href='projects-single-video-edit-$projectVideo->id' class='btn btn-xs btn-warning' title='Editer cette vidéo' aria-label='Editer cette vidéo'>
-                                <span class='fa fa-edit fa-fw'></span>
+                                <span>Éditer</span>
                             </a>
                             <a data-bs-toggle='modal' href='#suppr$projectVideo->id' class='btn btn-xs btn-danger' title='Supprimer cette vidéo' aria-label='Supprimer cette vidéo'>
-                                <span class='fa fa-times fa-fw'></span>
+                                <span>Supprimer</span>
                             </a>
                         </div><br><br>
                     </div>

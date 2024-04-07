@@ -1,7 +1,8 @@
 <?php
 
 $conf_phone = "01 56 06 90 41";
-$call_phone = "0156069041";
+$call_phone = strtolower(str_replace(" ", "", $conf_phone));
+
 
 $conf_email = "contact@sensvinylo.fr";
 
@@ -12,6 +13,7 @@ $conf_name_website = "sensvinylo.fr";
 $conf_line1 = "242 Rue du Faubourg Saint-Antoine";
 $conf_zipcode = "75012";
 $conf_city = "Paris";
+$conf_googleMap = "https://maps.app.goo.gl/ATckNtZqt4qj6UDz8";
 
 $conf_address = "$conf_line1 <br> $conf_zipcode $conf_city";
 

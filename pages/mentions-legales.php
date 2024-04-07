@@ -1,5 +1,4 @@
 <?php
-//start_block('title','keywords','description')
 start_block('', '', '');
 ?>
 

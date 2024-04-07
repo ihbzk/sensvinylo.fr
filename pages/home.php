@@ -32,18 +32,14 @@
     <div class="container w-100">
         <div class="blocs">
             <?php
-
-            // Projets
             $stmt = $db_client->prepare("SELECT * FROM project GROUP BY id ORDER BY updated_at ASC");
             $stmt->execute();
             $projects = $stmt->fetchAll();
 
-            // Catégories de projet
             $stmt2 = $db_client->prepare("SELECT * FROM project_categories GROUP BY id ORDER BY updated_at ASC");
             $stmt2->execute();
             $projectCategories = $stmt2->fetchAll();
 
-            // Studios
             $stmt3 = $db_client->prepare("SELECT * FROM studios GROUP BY id ORDER BY updated_at ASC");
             $stmt3->execute();
             $studios = $stmt3->fetchAll();
@@ -62,25 +58,25 @@
                                     if (isset($projects)) : ?>
                                         <?php foreach ($projects as $project) : ?>
                                             <?php
-                                                $slug = $project->slug;
-                                                $slug = remove_accents($slug);
-                                                $slug = str_replace(array(' ', ':', ',', ';', '/', '.'), array('-', '-', '-', '-', '-', ''), $slug);
-                                                $slug = strtolower($slug);
-                                                $urlProject = $routes['project-single'] . '-' . $slug;
+                                            $slug = $project->slug;
+                                            $slug = remove_accents($slug);
+                                            $slug = str_replace(array(' ', ':', ',', ';', '/', '.'), array('-', '-', '-', '-', '-', ''), $slug);
+                                            $slug = strtolower($slug);
+                                            $urlProject = $routes['project-single'] . '-' . $slug;
                                             ?>
                                             <?php foreach ($projectCategories as $projectCategory) : ?>
                                                 <?php foreach ($studios as $studio) : ?>
                                                     <?php
-                                                        $slug = $studio->slug;
-                                                        $slug = remove_accents($slug);
-                                                        $slug = str_replace(array(' ', ':', ',', ';', '/', '.'), array('-', '-', '-', '-', '-', ''), $slug);
-                                                        $slug = strtolower($slug);
-                                                        $urlStudio = $routes['studio-single'] . '-' . $slug;
+                                                    $slug = $studio->slug;
+                                                    $slug = remove_accents($slug);
+                                                    $slug = str_replace(array(' ', ':', ',', ';', '/', '.'), array('-', '-', '-', '-', '-', ''), $slug);
+                                                    $slug = strtolower($slug);
+                                                    $urlStudio = $routes['studio-single'] . '-' . $slug;
                                                     ?>
                                                     <a href="<?= $urlProject ?>" aria-label="Projet">
                                                         <span aria-hidden="true"><?= $project->cover_title ?> &nbsp; // </span>
                                                     </a>
-                                                    <a href="projets" aria-label="Catégorie de projets">
+                                                    <a href="<?= getRoute("projects"); ?>" aria-label="Catégorie de projets">
                                                         <span aria-hidden="true"><?= $projectCategory->title ?> &nbsp; // </span>
                                                     </a>
                                                     <a href="<?= $urlStudio ?>" aria-label="Studio">
@@ -89,7 +85,7 @@
                                                     <a href="<?= $urlProject ?>" aria-label="Projet">
                                                         <span aria-hidden="true"><?= $project->cover_title ?> &nbsp; // </span>
                                                     </a>
-                                                    <a href="projets" aria-label="Catégorie de projets">
+                                                    <a href="<?= getRoute("projects"); ?>" aria-label="Catégorie de projets">
                                                         <span aria-hidden="true"><?= $projectCategory->title ?> &nbsp; // </span>
                                                     </a>
                                                     <a href="<?= $urlStudio ?>" aria-label="Studio">
@@ -124,7 +120,7 @@
                 <p>Notre engagement ne s'arrête pas à la qualité de nos produits et services. <strong>Chez <?= $conf_name ?>, nous sommes convaincus que le respect de l'environnement est essentiel.</strong> C'est pourquoi nous utilisons des vinyles éco-responsables et des techniques de production durables.</p>
                 <p>Pour vous accompagner dans votre projet, nous mettons à votre disposition une équipe de designers expérimentés qui vous conseillent et vous guident tout au long du processus de création, de la conception à la réalisation.</p>
                 <p>Un <strong>large choix de vinyles</strong> est disponible avec des matières nobles, des couleurs vibrantes et des textures uniques pour une créativité sans limites. Nous utilisons des technologies de pointe : impression numérique, découpe laser et thermoformage pour des réalisations d'une précision exceptionnelle.</p>
-                <a href="studios" aria-label="Nos studios">
+                <a href="<?= getRoute("studios"); ?>" aria-label="Nos studios">
                     <img src="<?= asset("img/icons/arrow-white-right.svg"); ?>" alt="Flèche blanche pointant vers la droite" loading="lazy">
                 </a>
             </div>
@@ -150,7 +146,7 @@
                 <p><?= $conf_name ?> a également collaboré avec de nombreux artistes, designers et architectes de renom pour créer des projets uniques et spectaculaires.</p>
                 <p><strong>L'entreprise est fière de son engagement en faveur du développement durable</strong> et s'est engagée à utiliser des vinyles éco-responsables et des techniques de production durables.</p><br>
                 <p><strong>Chez <?= $conf_name ?>, nous sommes convaincus que la création est un processus collaboratif.</strong> C'est pourquoi nous sommes fiers d'avoir une communauté active et passionnée de clients et de partenaires.</p>
-                <a href="studio-kina" aria-label="Studio Kina">
+                <a href="<?= getRoute("sensvinylo"); ?>" aria-label="Notre histoire">
                     <img src="<?= asset("img/icons/arrow-white-right.svg"); ?>" alt="Flèche blanche pointant vers la droite" loading="lazy">
                 </a>
             </div>
@@ -172,7 +168,7 @@
                     <li><strong>Votre budget</strong> : Quelles sont vos options en fonction de votre budget ?</li>
                 </ul>
                 <p><strong>Notre objectif est de créer un croquis qui correspond parfaitement à vos attentes et qui vous permettra de vous projeter dans votre futur espace.</strong></p>
-                <a href="projets" aria-label="Production">
+                <a href="<?= getRoute("projects"); ?>" aria-label="Production">
                     <img src="<?= asset("img/icons/arrow-white-right.svg"); ?>" alt="Flèche blanche pointant vers la droite" loading="lazy">
                 </a>
             </div>
@@ -195,7 +191,7 @@
                     <li><strong>Revêtements muraux en vinyle</strong> : Papier peint vinyle, toile tendue, panneaux muraux</li>
                     <li><strong>Décorations en vinyle</strong> : Stickers muraux, lettrages adhésifs, fresques murales</li>
                 </ul>
-                <a href="projets" aria-label="Production virtuelle">
+                <a href="<?= getRoute("projects"); ?>" aria-label="Production virtuelle">
                     <img src="<?= asset("img/icons/arrow-white-right.svg"); ?>" alt="Flèche blanche pointant vers la droite" loading="lazy">
                 </a>
             </div>
@@ -212,7 +208,7 @@
                     <li><strong>Vous fournir des conseils d'entretien pour votre revêtement en vinyle.</strong></li>
                 </ul>
                 <p><strong>Notre objectif est de vous garantir une satisfaction totale et de vous offrir un résultat qui vous fera rêver.</strong></p>
-                <a href="projets" aria-label="Post-production">
+                <a href="<?= getRoute("projects"); ?>" aria-label="Post-production">
                     <img src="<?= asset("img/icons/arrow-white-right.svg"); ?>" alt="Flèche blanche pointant vers la droite" loading="lazy">
                 </a>
             </div>
@@ -266,10 +262,10 @@
     <div class="container">
         <div class="df-fdcr">
             <ul id="map">
-                <li id="position1" title="Atelier SensVinylo" style="top: 39%; left: 59%;"><a href="https://maps.app.goo.gl/9dXb1h5dZ1V766B59" target="_blank" aria-label="Atelier SensVinylo">Atelier SensVinylo</a></li>
-                <li id="position2" title="Atelier Vintage" style="top:48.15%; left: 53.9%;"><a href="https://maps.app.goo.gl/9dXb1h5dZ1V766B59" target="_blank" aria-label="Atelier Vintage">Atelier Vintage</a></li>
-                <li id="position3" title="Atelier Azur" style="top: 50.3%; left: 31.57%;"><a href="https://maps.app.goo.gl/9dXb1h5dZ1V766B59" target="_blank" aria-label="Atelier Azur">Atelier Azur</a></li>
-                <li id="position4" title="Atelier Echo" style="top: 30.3%; left: 41.57%;"><a href="https://maps.app.goo.gl/9dXb1h5dZ1V766B59" target="_blank" aria-label="Atelier Echo">Atelier Echo</a></li>
+                <li id="position1" title="Atelier SensVinylo" style="top: 39%; left: 59%;"><a href="<?= $conf_googleMap ?>" target="_blank" aria-label="Atelier SensVinylo">Atelier SensVinylo</a></li>
+                <li id="position2" title="Atelier Vintage" style="top:48.15%; left: 53.9%;"><a href="<?= $conf_googleMap ?>" target="_blank" aria-label="Atelier Vintage">Atelier Vintage</a></li>
+                <li id="position3" title="Atelier Azur" style="top: 50.3%; left: 31.57%;"><a href="<?= $conf_googleMap ?>" target="_blank" aria-label="Atelier Azur">Atelier Azur</a></li>
+                <li id="position4" title="Atelier Echo" style="top: 30.3%; left: 41.57%;"><a href="<?= $conf_googleMap ?>" target="_blank" aria-label="Atelier Echo">Atelier Echo</a></li>
                 <li id="position5" title="Plateau virtuel à venir" style="top: 77.9%; left: 25.57%;"><span aria-label="Plateau virtuel à venir">Plateau virtuel à venir</span></li>
             </ul>
         </div>

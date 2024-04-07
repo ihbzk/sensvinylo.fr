@@ -173,16 +173,16 @@ if (!empty($projects)) :
                     <td>" . date("d/m/Y", strtotime($project->updated_at)) . "</td>
                     <td>
                         <a data-bs-toggle='modal' href='#desc$project->id' class='btn btn-xs btn-info' title='Contenu de ce projet' aria-label='Contenu de ce projet'>
-                            <span class='fa fa-file fa-fw'></span>
+                            <span>Voir</span>
                         </a>
                     </td>
                     <td>
                         <a href='projects-edit-$project->id' class='btn btn-xs btn-warning' title='Editer ce projet'>
-                            <span class='fa fa-edit fa-fw'></span>
+                            <span>Éditer</span>
                         </a>
                         &nbsp;&nbsp;
                         <a data-bs-toggle='modal' href='#suppr$project->id' class='btn btn-xs btn-danger' title='Supprimer ce projet' aria-label='Supprimer ce projet'>
-                            <span class='fa fa-times fa-fw'></span>
+                            <span>Supprimer</span>
                         </a>
                     </td>
                 </tr>

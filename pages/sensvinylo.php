@@ -13,6 +13,9 @@
             <div class="bloc2">
                 <p><strong><a href="<?= getRoute("home"); ?>" aria-label="Lien menant vers la page d'accueil du site web de <?= $conf_name ?>"><?= $conf_name ?></a> n'est pas simplement une entreprise, c'est une véritable institution dans l'univers de la décoration et du revêtement en vinyle, reconnue pour son approche unique et personnalisée dans la création d'espaces.</strong> Fondée en 1991 par Éric Rousseau, un véritable pionnier dans le domaine, <a href="<?= getRoute("home"); ?>" aria-label="Lien menant vers la page d'accueil du site web de <?= $conf_name ?>"><?= $conf_name ?></a> s'est rapidement distinguée par son approche artisanale et son engagement envers la qualité et l'innovation. Au cœur de l'entreprise, il y a une <strong>volonté ferme de transformer chaque espace en une œuvre d'art</strong>, reflétant les désirs et la personnalité de chaque client.</p>
                 <p class="pb-3"><strong>L'histoire de <a href="<?= getRoute("home"); ?>" aria-label="Lien menant vers la page d'accueil du site web de <?= $conf_name ?>"><?= $conf_name ?></a> est celle d'une passion inébranlable pour le vinyle</strong>, un matériau versatile et expressif. Éric Rousseau, avec son œil artistique et son dévouement, a vu dans le vinyle un potentiel illimité pour la création d'espaces uniques et inspirants. Cette vision s'est matérialisée à travers des réalisations qui vont bien au-delà du revêtement de sol et mural traditionnel, <strong>explorant des possibilités infinies de design, de texture et de couleur</strong>.</p>
+                <div class="download-pdf">
+                    <a href="<?= $conf_linkedin ?>" target="_blank" aria-label="Lien menant vers la page des réaliastions de <?= $conf_name ?> sur LinkedIn">Retrouvez-nous sur LinkedIn</a>
+                </div>
             </div>
         </div>
     </div>
@@ -24,7 +27,7 @@
             <div class="bloc1">
                 <h2 class="pt-3">Notre philosophie de création</h2>
                 <p>Au fil des années, <strong><a href="<?= getRoute("home"); ?>" aria-label="Lien menant vers la page d'accueil du site web de <?= $conf_name ?>"><?= $conf_name ?></a> a su évoluer et s'adapter aux tendances</strong> tout en restant fidèle à ses racines. L'entreprise propose aujourd'hui une gamme étendue de services, incluant des revêtements muraux qui transforment vos murs en toiles d'expression, des sols en vinyle qui allient esthétique et fonctionnalité, ainsi que des œuvres d'art en vinyle qui ajoutent une touche d'originalité à tout espace de vie ou de travail. <strong>Chaque projet est une collaboration étroite entre les artisans de <a href="<?= getRoute("home"); ?>" aria-label="Lien menant vers la page d'accueil du site web de <?= $conf_name ?>"><?= $conf_name ?></a> et le client</strong>, garantissant un résultat final qui est à la fois personnel et unique.</p>
-                <a href="projets" class="pb-3" aria-label="Production">
+                <a href="<?= getRoute("projects"); ?>" class="pb-3" aria-label="Production">
                     <img src="<?= asset("img/icons/arrow-white-right.svg"); ?>" alt="Flèche blanche pointant vers la droite" loading="lazy">
                 </a>
             </div>

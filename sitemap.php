@@ -1,6 +1,7 @@
 <?php
 
-function generateSitemap($db_client) {
+function generateSitemap($db_client)
+{
     $stmt = $db_client->prepare("SELECT * FROM studios");
     $stmt->execute();
     $studios = $stmt->fetchAll(PDO::FETCH_OBJ);
@@ -78,9 +79,10 @@ function generateSitemap($db_client) {
     }
 
     $sitemap .= '</urlset>';
-    
+
     return $sitemap;
 }
 
 $sitemapContent = generateSitemap($db_client);
+
 file_put_contents('sitemap.xml', $sitemapContent);

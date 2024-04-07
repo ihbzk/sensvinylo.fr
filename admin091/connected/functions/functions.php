@@ -22,9 +22,12 @@ function redirectNotification($message, $redirect = null, $class = "success")
 {
     global $routes;
     global $base;
+
     if (!$redirect) $redirect = $base . $routes['home'];
     $message = base64_encode($message);
+
     header("Location: $redirect?message=$message&class=$class");
+
     echo "<script>location.href='$redirect?message=$message&class=$class'</script>";
 }
 
@@ -64,7 +67,6 @@ function printNotification()
  * @param String $asset The asset to load
  * @return String the relative path of the asset
  */
-
 function asset($asset)
 {
     global $base;
@@ -78,11 +80,11 @@ function asset($asset)
  * @param String $route The route to find
  * @return String the absolute route of the page
  */
-
 function getRoute($route)
 {
     global $base;
     global $routes;
+
     return $base . $routes[$route];
 }
 
@@ -101,5 +103,6 @@ function remove_accents($str)
         array('a', 'a', 'a', 'a', 'a', 'a', 'ae', 'c', 'e', 'e', 'e', 'e', 'i', 'i', 'i', 'i', 'o', 'n', 'o', 'o', 'o', 'o', 'o', 'o', 'u', 'u', 'u', 'u', 'y', 'th', 'y'),
         $str
     );
+    
     return $str;
 }

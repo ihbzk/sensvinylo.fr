@@ -9,12 +9,12 @@
                     <div class="page slide-page">
                         <p class="text-contact">Vous avez un projet en tête ou besoin de renseignements supplémentaires ? N'hésitez pas à nous joindre directement via le formulaire de contact ci-dessous, ou par e-mail à <br><a href="mailto:<?= $conf_email ?>" class="footer-link"><?= $conf_email ?></a>.</p><br>
                         <div class="field">
-				            <?= form_error($data["email"]); ?>
+                            <?= form_error($data["email"]); ?>
                             <input type="email" class="simple-form" name="email" placeholder="Entrez votre e-mail" value="<?= $data["email"]["value"]; ?>" required />
                         </div>
                         <div class="field">
-				            <?= form_error($data["phone"]); ?>
-                            <input type="tel" class="simple-form" name="phone" placeholder="Entrez votre téléphone" value="<?= $data["phone"]["value"]; ?>" required >
+                            <?= form_error($data["phone"]); ?>
+                            <input type="tel" class="simple-form" name="phone" placeholder="Entrez votre téléphone" value="<?= $data["phone"]["value"]; ?>" required>
                         </div>
                         <div class="field">
                             <?= form_error($data["lastname"]); ?>
@@ -25,7 +25,7 @@
                             <input type="text" class="simple-form" name="firstname" placeholder="Entrez votre prénom" value="<?= $data["firstname"]["value"]; ?>">
                         </div>
                         <div class="field">
-		                    <?= form_error($data["message"], "Veuillez fournir un message."); ?>
+                            <?= form_error($data["message"], "Veuillez fournir un message."); ?>
                             <textarea class="simple-form" name="message" placeholder="Entrez votre message" rows="8" required><?= $data["message"]["value"]; ?></textarea>
                         </div>
                         <?= form_error($data["rgpd"], "Veuillez accepter les conditions"); ?>

@@ -1,9 +1,5 @@
 <?php
 
-/**
- * Compiles SCSS to style.css
- */
-
 require_once 'scssphp/scss.inc.php';
 
 use ScssPhp\ScssPhp\Compiler;

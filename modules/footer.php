@@ -11,7 +11,7 @@
             </div>
             <div class="block-right">
                 <h2>Contact</h2>
-                <a href="https://goo.gl/maps/AYYxQn7dVZThTmBs9" target="_blank" rel="noopener noreferrer" class="footer-link"><?= $conf_address ?></a>
+                <a href="<?= $conf_googleMap ?>" target="_blank" rel="noopener noreferrer" class="footer-link"><?= $conf_address ?></a>
                 <div class="block-logos">
                     <a href="tel:<?= $call_phone ?>" class="footer-link">
                         <img src="<?= asset("img/icons/phone.svg"); ?>" alt="Logo Téléphone" loading="lazy">
@@ -28,7 +28,7 @@
                     <a href="<?= $conf_linkedin ?>" class="footer-link" target="_blank">
                         <img src="<?= asset("img/icons/linkedin-3.svg"); ?>" alt="Logo LinkedIn" loading="lazy">
                     </a>
-                    
+
                 </div>
             </div>
         </div>
