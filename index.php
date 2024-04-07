@@ -54,6 +54,12 @@ if ($current_route == "studio-single") {
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <title><?= $conf_title ?></title>
     <meta name="description" content="<?= $conf_description ?>">
+
+    <?php $host = $_SERVER['HTTP_HOST']; ?>
+    <?php $uri = $_SERVER['REQUEST_URI']; ?>
+    <?php $canonical_url = "https://$host$uri"; ?>
+
+    <link rel="canonical" href="<?= $canonical_url ?>">
     <link rel="icon" href="<?= asset("img/icons/favicon.png"); ?>" type="image/x-icon" />
     <link rel="stylesheet" href="<?= asset("css/style.css"); ?>">
 </head>
