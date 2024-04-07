@@ -6,6 +6,11 @@ start_block('', '', '');
     <div class="container">
         <div class="back">
             <h1 class="padtest-30" style="padding-top: 100px; padding-bottom: 50px">Mentions légales de <?= $conf_name ?></h1>
+            <div class="bloc-logo text-center" style="padding-bottom: 30px">
+                <a href="<?= getRoute("home"); ?>" style="z-index: 1; display: block">
+                    <img src="<?= asset("img/icons/logo-footer.webp"); ?>" alt="Logo <?= $conf_name ?>" id="logo-footer" loading="lazy" width="120" class="h-100">
+                </a>
+            </div>
             <hr>
         </div>
         <div class="toggle-box-region">

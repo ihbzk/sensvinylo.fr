@@ -7,6 +7,7 @@ $routes = array(
 
     "mentions-legales" => "mentions-legales",
     "politique-de-confidentialite" => "politique-de-confidentialite",
+    "faq" => "faq",
 
     "studios" => "studios",
     "studio-single" => "studio",
@@ -27,6 +28,7 @@ $metas = array(
 
     "mentions-legales" => array("Mentions Légales - $conf_name", "Consultez les mentions légales de $conf_name pour en savoir plus sur notre société, notre politique de propriété intellectuelle et les informations légales concernant notre site.", "Mentions légales"),
     "politique-de-confidentialite" => array("Politique de Confidentialité - $conf_name", "Découvrez comment $conf_name recueille, utilise et protège les données personnelles de ses utilisateurs. Notre engagement pour votre vie privée.", "Politique de confidentialité"),
+    "faq" => array("FAQ - Questions Fréquentes - $conf_name", "Trouvez des réponses aux questions fréquemment posées sur les services et produits de $conf_name. Découvrez tout ce que vous devez savoir sur nos revêtements en vinyle, nos processus et bien plus", "Foire aux questions."),
 
     "studios" => array("Découvrez nos 3 studios à Paris - Un espace adapté à chaque projet", "Chaque studio est conçu pour répondre aux besoins spécifiques de vos projets photo ou de vidéo. Découvrez les caractéristiques uniques de chaque studio !", "Studios"),
     "projects" => array("La maison de Production - découvrez l'ensemble de nos projets", "Découvrez nos réalisations les plus récentes et apprenez-en davantage sur notre approche créative, notre expertise et notre passion pour l'art de la vidéo.", "Projets"),

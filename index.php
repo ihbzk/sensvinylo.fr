@@ -74,11 +74,8 @@ if ($current_route == "studio-single") {
     <?php include("modules/navbar.php"); ?>
 
     <div id="page-wrapper">
-        <?php // if ($current_route == "studio-single" || $current_route == "project-single") : ?>`
-
-        <?php // else : ?>
-            <?php include $page ?>
-        <?php // endif; ?>
+        
+        <?php include $page ?>
 
         <div class="sticky-phone download-pdf">
             <a href="tel:<?= $call_phone ?>"><?= $conf_phone ?></a>

@@ -4,14 +4,18 @@
         <div class="blocks">
             <div class="block-left">
                 <div class="bloc-logo">
-                    <a href="<?= getRoute("home"); ?>" style="z-index: 1">
+                    <a href="<?= getRoute("home"); ?>">
                         <img src="<?= asset("img/icons/logo-footer.webp"); ?>" alt="Logo <?= $conf_name ?>" id="logo-footer" loading="lazy">
                     </a>
+                    <a href="mailto:<?= $conf_email ?>" class="footer-link"><?= $conf_email ?></a>
+                    <a href="tel:<?= $call_phone ?>" class="footer-link"><?= $conf_phone ?></a>
                 </div>
             </div>
             <div class="block-right">
-                <h2>Contact</h2>
-                <a href="<?= $conf_googleMap ?>" target="_blank" rel="noopener noreferrer" class="footer-link"><?= $conf_address ?></a>
+                <p>Contact</p>
+                <div>
+                    <a href="<?= $conf_googleMap ?>" target="_blank" rel="noopener noreferrer" class="footer-link"><?= $conf_address ?></a>
+                </div>
                 <div class="block-logos">
                     <a href="tel:<?= $call_phone ?>" class="footer-link">
                         <img src="<?= asset("img/icons/phone.svg"); ?>" alt="Logo Téléphone" loading="lazy">
@@ -36,15 +40,17 @@
         <div class="sublinks">
             <small><a href="<?= getRoute("revetement-vinyle-paris"); ?>">Revêtement vinyle à Paris</a></small>
             <small class="separate"> | </small>
+            <small><a href="<?= getRoute("faq"); ?>">FAQ</a></small>
+            <small class="separate"> | </small>
             <small><a href="<?= getRoute("mentions-legales"); ?>">Mentions légales</a></small>
             <small class="separate"> | </small>
             <small><a href="<?= getRoute("politique-de-confidentialite"); ?>">Politique de confidentialité</a></small>
             <small class="separate"> | </small>
             <small><a href="sitemap.xml">Plan du site</a></small>
-            <small class="separate"> | </small>
-            <small><a href="<?= getRoute("home"); ?>"><?= $conf_name ?></a></small>
-            <small class="separate"> | </small>
-            <small><a href="<?= getRoute("home"); ?>"><?= date("Y"); ?></a></small>
+        </div>
+        <br>
+        <div class="sublinks">
+            <small><a href="<?= getRoute("home"); ?>"><?= $conf_name ?> | <?= date("Y"); ?></a></small>
         </div>
     </div>
 </footer>
