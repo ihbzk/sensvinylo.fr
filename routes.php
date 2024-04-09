@@ -15,6 +15,7 @@ $routes = array(
     "project-single" => "projet",
 
     "revetement-vinyle-paris" => "revetement-vinyle-paris",
+    "decoration-vinyle-sur-mesure" => "decoration-vinyle-sur-mesure",
 
     "404" => "404",
 );
@@ -34,6 +35,8 @@ $metas = array(
     "projects" => array("La maison de Production - découvrez l'ensemble de nos projets", "Découvrez nos réalisations les plus récentes et apprenez-en davantage sur notre approche créative, notre expertise et notre passion pour l'art de la vidéo.", "Projets"),
 
     "revetement-vinyle-paris" => array("Revêtement Vinyle Paris - $conf_name", "Découvrez les avantages du revêtement vinyle pour vos murs et sols à Paris. $conf_name propose des solutions de décoration sur mesure pour les particuliers et les professionnels.", "Revêtement vinyle Paris"),
+    "decoration-vinyle-sur-mesure" => array("Décoration Vinyle Sur Mesure - $conf_name", "Découvrez la décoration vinyle sur mesure par $conf_name : une solution élégante et durable pour vos sols et murs. Transformez votre espace avec style et innovation.
+    ", "Décoration Vinyle Sur Mesure"),
 
     "404" => array("Erreur 404", "Erreur 404", "Erreur 404"),
 );

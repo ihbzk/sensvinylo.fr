@@ -40,6 +40,8 @@
         <div class="sublinks">
             <small><a href="<?= getRoute("revetement-vinyle-paris"); ?>">Revêtement vinyle à Paris</a></small>
             <small class="separate"> | </small>
+            <small><a href="<?= getRoute("decoration-vinyle-sur-mesure"); ?>">Décoration vinyle sur mesure</a></small>
+            <small class="separate"> | </small>
             <small><a href="<?= getRoute("faq"); ?>">FAQ</a></small>
             <small class="separate"> | </small>
             <small><a href="<?= getRoute("mentions-legales"); ?>">Mentions légales</a></small>
