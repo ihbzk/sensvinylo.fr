@@ -1,6 +1,6 @@
 <?php
 
-$conf_phone = "01 56 06 90 41";
+$conf_phone = "01 02 03 04 05";
 $call_phone = strtolower(str_replace(" ", "", $conf_phone));
 
 
@@ -10,10 +10,10 @@ $conf_name = "SensVinylo";
 
 $conf_name_website = "sensvinylo.fr";
 
-$conf_line1 = "242 Rue du Faubourg Saint-Antoine";
+$conf_line1 = "91 Rue de l'Exemple";
 $conf_zipcode = "75012";
 $conf_city = "Paris";
-$conf_googleMap = "https://maps.app.goo.gl/ATckNtZqt4qj6UDz8";
+$conf_googleMap = "";
 
 $conf_address = "$conf_line1 <br> $conf_zipcode $conf_city";
 
