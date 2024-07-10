@@ -43,6 +43,7 @@
             <small><a href="<?= getRoute("decoration-murale-en-vinyle"); ?>">Décoration murale en vinyle</a></small>
             <small><a href="<?= getRoute("pourquoi-nous-choisir"); ?>">Pourquoi nous choisir</a></small>
             <small><a href="<?= getRoute("conseils-et-inspirations"); ?>">Conseils et inspirations</a></small>
+            <small><a href="<?= getRoute("pose-de-vinyle-professionnel"); ?>">Pose de vinyle professionnel</a></small>
         </div>
         <small class="separate py-2">-</small>
         <div class="sublinks">

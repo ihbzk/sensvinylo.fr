@@ -19,6 +19,7 @@ $routes = array(
     "decoration-murale-en-vinyle" => "decoration-murale-en-vinyle",
     "pourquoi-nous-choisir" => "pourquoi-nous-choisir",
     "conseils-et-inspirations" => "conseils-et-inspirations",
+    "pose-de-vinyle-professionnel" => "pose-de-vinyle-professionnel",
 
     "404" => "404",
 );
@@ -43,6 +44,7 @@ $metas = array(
     "decoration-murale-en-vinyle" => array("Décoration murale en vinyle - Design et personnalisation unique", "Découvrez nos décorations murales en vinyle personnalisées. Design unique, installation facile, et options éco-responsables pour embellir votre intérieur.", "Décoration Murale en Vinyle"),
     "pourquoi-nous-choisir" => array("Pourquoi Nous Choisir - $conf_name", "Découvrez pourquoi $conf_name est le partenaire idéal pour vos projets de décoration en vinyle. Expertise, innovation, durabilité et personnalisation : les valeurs qui nous animent.", "Pourquoi Nous Choisir"),
     "conseils-et-inspirations" => array("Nos experts sont là pour vous conseiller - $conf_name", "Découvrez nos conseils pour choisir et entretenir vos revêtements et décorations en vinyle. Astuces, tendances et recommandations pour un intérieur élégant et durable.", "Conseils"),
+    "pose-de-vinyle-professionnel" => array("Pose de Vinyle Professionnelle - $conf_name : Experts en Revêtements de Sol", "Découvrez nos services de pose de vinyle professionnel. SensVinylo garantit qualité et durabilité pour vos projets de revêtement de sol. Contactez-nous dès aujourd'hui !", "Pose de Vinyle Professionnelle"),
 
     "404" => array("Erreur 404", "Erreur 404", "Erreur 404"),
 );
