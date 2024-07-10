@@ -16,6 +16,9 @@ $routes = array(
 
     "revetement-vinyle-paris" => "revetement-vinyle-paris",
     "decoration-vinyle-sur-mesure" => "decoration-vinyle-sur-mesure",
+    "decoration-murale-en-vinyle" => "decoration-murale-en-vinyle",
+    "pourquoi-nous-choisir" => "pourquoi-nous-choisir",
+    "conseils-et-inspirations" => "conseils-et-inspirations",
 
     "404" => "404",
 );
@@ -37,6 +40,9 @@ $metas = array(
     "revetement-vinyle-paris" => array("Revêtement Vinyle Paris - $conf_name", "Découvrez les avantages du revêtement vinyle pour vos murs et sols à Paris. $conf_name propose des solutions de décoration sur mesure pour les particuliers et les professionnels.", "Revêtement vinyle Paris"),
     "decoration-vinyle-sur-mesure" => array("Décoration Vinyle Sur Mesure - $conf_name", "Découvrez la décoration vinyle sur mesure par $conf_name : une solution élégante et durable pour vos sols et murs. Transformez votre espace avec style et innovation.
     ", "Décoration Vinyle Sur Mesure"),
+    "decoration-murale-en-vinyle" => array("Décoration murale en vinyle - Design et personnalisation unique", "Découvrez nos décorations murales en vinyle personnalisées. Design unique, installation facile, et options éco-responsables pour embellir votre intérieur.", "Décoration Murale en Vinyle"),
+    "pourquoi-nous-choisir" => array("Pourquoi Nous Choisir - $conf_name", "Découvrez pourquoi $conf_name est le partenaire idéal pour vos projets de décoration en vinyle. Expertise, innovation, durabilité et personnalisation : les valeurs qui nous animent.", "Pourquoi Nous Choisir"),
+    "conseils-et-inspirations" => array("Nos experts sont là pour vous conseiller - $conf_name", "Découvrez nos conseils pour choisir et entretenir vos revêtements et décorations en vinyle. Astuces, tendances et recommandations pour un intérieur élégant et durable.", "Conseils"),
 
     "404" => array("Erreur 404", "Erreur 404", "Erreur 404"),
 );

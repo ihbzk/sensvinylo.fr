@@ -21,7 +21,7 @@ function generateSitemap($db_client)
     <url>
     <loc>https://www.sensvinylo.fr/sensvinylo</loc>
     <lastmod>' . date('Y-m-d\TH:i:sP') . '</lastmod>
-    <priority>0.80</priority>
+    <priority>0.90</priority>
     </url>
     <url>
     <loc>https://www.sensvinylo.fr/revetement-vinyle-paris</loc>
@@ -34,34 +34,44 @@ function generateSitemap($db_client)
     <priority>0.80</priority>
     </url>
     <url>
-    <loc>https://www.sensvinylo.fr/faq</loc>
+    <loc>https://www.sensvinylo.fr/pourquoi-nous-choisir</loc>
     <lastmod>' . date('Y-m-d\TH:i:sP') . '</lastmod>
     <priority>0.80</priority>
+    </url>
+    <url>
+    <loc>https://www.sensvinylo.fr/conseils-et-inspirations</loc>
+    <lastmod>' . date('Y-m-d\TH:i:sP') . '</lastmod>
+    <priority>0.80</priority>
+    </url>
+    <url>
+    <loc>https://www.sensvinylo.fr/faq</loc>
+    <lastmod>' . date('Y-m-d\TH:i:sP') . '</lastmod>
+    <priority>0.90</priority>
     </url>
     <url>
     <loc>https://www.sensvinylo.fr/mentions-legales</loc>
     <lastmod>' . date('Y-m-d\TH:i:sP') . '</lastmod>
-    <priority>0.80</priority>
+    <priority>0.90</priority>
     </url>
     <url>
     <loc>https://www.sensvinylo.fr/politique-de-confidentialite</loc>
     <lastmod>' . date('Y-m-d\TH:i:sP') . '</lastmod>
-    <priority>0.80</priority>
+    <priority>0.90</priority>
     </url>
     <url>
     <loc>https://www.sensvinylo.fr/contact</loc>
     <lastmod>' . date('Y-m-d\TH:i:sP') . '</lastmod>
-    <priority>0.80</priority>
+    <priority>0.90</priority>
     </url>
     <url>
     <loc>https://www.sensvinylo.fr/studios</loc>
     <lastmod>' . date('Y-m-d\TH:i:sP') . '</lastmod>
-    <priority>0.80</priority>
+    <priority>0.90</priority>
     </url>
     <url>
     <loc>https://www.sensvinylo.fr/projets</loc>
     <lastmod>' . date('Y-m-d\TH:i:sP') . '</lastmod>
-    <priority>0.80</priority>
+    <priority>0.90</priority>
     </url>';
 
     foreach ($studios as $studio) {

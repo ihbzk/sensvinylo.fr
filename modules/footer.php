@@ -37,11 +37,15 @@
             </div>
         </div>
         <hr>
-        <div class="sublinks">
+        <div class="sublinks flex-column gap-0">
             <small><a href="<?= getRoute("revetement-vinyle-paris"); ?>">Revêtement vinyle à Paris</a></small>
-            <small class="separate"> | </small>
             <small><a href="<?= getRoute("decoration-vinyle-sur-mesure"); ?>">Décoration vinyle sur mesure</a></small>
-            <small class="separate"> | </small>
+            <small><a href="<?= getRoute("decoration-murale-en-vinyle"); ?>">Décoration murale en vinyle</a></small>
+            <small><a href="<?= getRoute("pourquoi-nous-choisir"); ?>">Pourquoi nous choisir</a></small>
+            <small><a href="<?= getRoute("conseils-et-inspirations"); ?>">Conseils et inspirations</a></small>
+        </div>
+        <small class="separate py-2">-</small>
+        <div class="sublinks">
             <small><a href="<?= getRoute("faq"); ?>">FAQ</a></small>
             <small class="separate"> | </small>
             <small><a href="<?= getRoute("mentions-legales"); ?>">Mentions légales</a></small>
